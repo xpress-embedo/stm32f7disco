@@ -36,7 +36,8 @@ void MainTask(void)
 {
   GUI_Clear();
   GUI_SetFont(&GUI_Font32_1);
-  GUI_DispStringAt("Hello world!", (LCD_GetXSize()-100)/2, (LCD_GetYSize()-20)/2);
+  /*Tutorial 1: Simple Example to display text on the display*/
+  GUI_DispStringAt("Hello World!", (LCD_GetXSize()-100)/2, (LCD_GetYSize()-20)/2);
   while(1);
 }
 
