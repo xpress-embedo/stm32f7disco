@@ -61,6 +61,24 @@ void MainTask(void)
   GUI_FillRectEx(&Rect);
   /*GUI_ROTATE_0, GUI_ROTATE_180, GUI_ROTATE_CCW, GUI_ROTATE_CW*/
   GUI_DispStringInRectEx(acText, &Rect, GUI_TA_HCENTER | GUI_TA_VCENTER, strlen(acText), GUI_ROTATE_CW );
+
+  /*Text Mode: GUI_TEXTMODE_NORMAL, _REV, _TRANS, _XOR*/
+  GUI_SetFont(&GUI_Font32_1);
+  GUI_GotoXY(0, 288);
+  GUI_SetTextMode(GUI_TEXTMODE_REV);
+  GUI_DispString("Reverse Text");
+  GUI_SetTextMode(GUI_TEXTMODE_TRANS);
+  GUI_DispString("Transparent Text");
+  GUI_SetTextMode(GUI_TEXTMODE_XOR);
+  GUI_DispString("Xor Text\r\n");
+  /*Text Style: GUI_TS_NORMAL, UNDERLINE, STRIKETHRU, OVERLINE*/
+  GUI_SetTextMode(GUI_TEXTMODE_NORMAL);
+  GUI_SetTextStyle(GUI_TS_UNDERLINE);
+  GUI_DispString("Underline Text");
+  GUI_SetTextStyle(GUI_TS_STRIKETHRU);
+  GUI_DispString("Strike Text");
+  GUI_SetTextStyle(GUI_TS_OVERLINE);
+  GUI_DispString("Overline Text");
   while(1);
 }
 
