@@ -78,7 +78,15 @@ void MainTask(void)
   GUI_SetTextStyle(GUI_TS_STRIKETHRU);
   GUI_DispString("Strike Text");
   GUI_SetTextStyle(GUI_TS_OVERLINE);
-  GUI_DispString("Overline Text");
+  GUI_DispString("Overline Text\r\n");
+
+  /*Displaying Values*/
+  GUI_SetFont(&GUI_Font32_1);
+  GUI_SetBkColor(GUI_BLACK);
+  GUI_SetTextMode(GUI_TEXTMODE_NORMAL);
+  GUI_SetTextStyle(GUI_TS_NORMAL);
+  GUI_DispDec(1234, 4);
+  GUI_DispDecAt( 9876, 100, 352, 4);
   while(1);
 }
 
