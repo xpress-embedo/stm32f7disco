@@ -87,6 +87,33 @@ void MainTask(void)
   GUI_SetTextStyle(GUI_TS_NORMAL);
   GUI_DispDec(1234, 4);
   GUI_DispDecAt( 9876, 100, 352, 4);
+  // GUI_Delay(1000);
+
+  /*2D Graphics Library Examples*/
+  /*Basic Drawing Routines*/
+  GUI_Clear();
+  GUI_SetDrawMode(GUI_DRAWMODE_NORMAL);
+  /*Horizontal Color Gradient*/
+  GUI_DrawGradientH(0, 0, 99, 99, 0x0000FF, 0x00FFFF);
+  /*Vertical Color Gradient*/
+  GUI_DrawGradientV(100, 0, 199, 99, 0x0000FF, 0x00FFFF);
+  /*Horizontal Color Gradient with Radius*/
+  GUI_DrawGradientRoundedH(200, 0, 299, 99, 25, 0x0000FF, 0x00FFFF);
+  /*Vertical Color Gradient with Radius*/
+  GUI_DrawGradientRoundedV(300, 0, 399, 99, 25, 0x0000FF, 0x00FFFF);
+
+  /*Draw Pixel*/
+  GUI_DrawPixel(400, 0);
+  /*Draw Point*/
+  /*Increase Pen Size*/
+  GUI_SetPenSize(10);
+  GUI_DrawPoint(400, 80);
+  /*Reset Pen Size*/
+  GUI_SetPenSize(1);
+  /*Draw Rectangle*/
+  GUI_DrawRect(0, 100, 100, 200 );
+  /*Draw Rounded Frame*/
+  GUI_DrawRoundedFrame(100, 100, 200, 200, 25, 5);
   while(1);
 }
 
